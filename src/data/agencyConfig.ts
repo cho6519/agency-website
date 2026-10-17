@@ -12,7 +12,7 @@ export const AGENCY_CONFIG = {
     kakaoChannelUrl: 'https://pf.kakao.com/_EXdxnn', // TRANDOT 공식 카카오톡 채널 URL
     paymentUrl: 'https://bp2.kr/GizA', // 비대면 카드결제(블로그페이) 단축 URL
     priceRange: '₩500,000 - ₩2,500,000',
-    ogImage: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&h=630&q=80',
+    ogImage: 'https://agency-website.cho6519.workers.dev/trandot-og-v2.jpg',
     naverVerification: '', // 네이버 서치어드바이저 소유확인 키 (입력 시 자동 메타태그 출력)
     googleVerification: '', // 구글 서치콘솔 소유확인 키 (입력 시 자동 메타태그 출력)
     businessNumber: '855-72--00367',

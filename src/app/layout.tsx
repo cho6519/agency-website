@@ -31,26 +31,33 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: `${brand.name} WEB STUDIO | 월 유지비 평생 0원 50만 원 고전환 웹 제작`,
-    description: '매달 나가는 홈페이지 호스팅비, 평생 0원으로 끝내드립니다. 소상공인·중소기업 타깃 1페이지 5섹션 고전환 반응형 웹사이트 3일 완성 솔루션',
+    title: `${brand.name} WEB STUDIO | 월 유지비 평생 0원, 50만원 전환형 홈페이지`,
+    description: '소상공인, 1인 기업을 위한 5섹션 완결형 반응형 홈페이지 제작',
     url: brand.siteUrl,
-    siteName: `${brand.nameKr} (${brand.name})`,
-    locale: 'ko_KR',
-    type: 'website',
+    siteName: `${brand.name} WEB STUDIO`,
     images: [
       {
-        url: brand.ogImage,
+        url: '/trandot-og-v2.jpg',
         width: 1200,
         height: 630,
-        alt: `${brand.nameKr} 웹스튜디오`,
+        alt: `${brand.name} WEB STUDIO - 50만원 전환형 홈페이지 제작`,
       },
     ],
+    locale: 'ko_KR',
+    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${brand.name} WEB STUDIO | 월 유지비 평생 0원 50만 원 고전환 웹 제작`,
-    description: '매달 나가는 홈페이지 호스팅비, 평생 0원으로 끝내드립니다. 소상공인·중소기업 타깃 1페이지 5섹션 고전환 반응형 웹사이트 3일 완성 솔루션',
-    images: [brand.ogImage],
+    title: `${brand.name} WEB STUDIO | 월 유지비 평생 0원, 50만원 전환형 홈페이지`,
+    description: '소상공인, 1인 기업을 위한 5섹션 완결형 반응형 홈페이지 제작',
+    images: [
+      {
+        url: '/trandot-og-v2.jpg',
+        width: 1200,
+        height: 630,
+        alt: `${brand.name} WEB STUDIO - 50만원 전환형 홈페이지 제작`,
+      },
+    ],
   },
   verification: {
     google: brand.googleVerification || undefined,
