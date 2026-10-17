@@ -51,12 +51,13 @@ export const Footer: React.FC = () => {
               <p>
                 <span className="text-slate-500">사업장 주소:</span> <span className="text-slate-300">{brand.address}</span>
               </p>
-              <p>
+              <p className="text-[10px] sm:text-[11px] leading-relaxed whitespace-nowrap tracking-tight">
                 <span className="text-slate-500">대표전화:</span>{' '}
                 <a href={`tel:${brand.contactTel}`} className="text-cyan-400 hover:underline">
                   {brand.contactTel}
                 </a>{' '}
-                | <span className="text-slate-500">이메일:</span>{' '}
+                <span className="text-slate-600 mx-1">|</span>{' '}
+                <span className="text-slate-500">이메일:</span>{' '}
                 <a href={`mailto:${brand.contactEmail}`} className="text-cyan-400 hover:underline">
                   {brand.contactEmail}
                 </a>

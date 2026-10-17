@@ -39,9 +39,9 @@ export const PricingSection: React.FC = () => {
               >
                 {/* Popular Glow Badge */}
                 {isBest && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 text-white text-xs font-black shadow-lg shadow-cyan-500/30 flex items-center gap-1.5 border border-cyan-400/30">
-                    <Sparkles className="w-3.5 h-3.5 text-amber-300 fill-amber-300" />
-                    <span>{plan.badge}</span>
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3.5 py-1 rounded-full bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 text-white text-[11px] sm:text-xs font-black shadow-lg shadow-cyan-500/30 flex items-center gap-1.5 border border-cyan-400/30 whitespace-nowrap z-20">
+                    <Sparkles className="w-3.5 h-3.5 text-amber-300 fill-amber-300 shrink-0" />
+                    <span className="whitespace-nowrap">{plan.badge}</span>
                   </div>
                 )}
 

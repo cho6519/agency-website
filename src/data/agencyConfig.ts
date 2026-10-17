@@ -7,6 +7,7 @@ export const AGENCY_CONFIG = {
     tagline: '소상공인·중소기업 타깃 고전환 웹 제작 에이전시',
     contactTel: '010-4951-6519',
     contactEmail: 'cho6519@gmail.com',
+    siteUrl: 'https://url.kr/3a537l', // TRANDOT 공식 단축 웹사이트 URL
     kakaoChannelUrl: 'https://pf.kakao.com/_EXdxnn', // TRANDOT 공식 카카오톡 채널 URL
     paymentUrl: 'https://bp2.kr/GizA', // 비대면 카드결제(블로그페이) 단축 URL
     businessNumber: '855-72--00367',

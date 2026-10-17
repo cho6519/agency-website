@@ -254,24 +254,38 @@ export const QuickApplicationForm: React.FC = () => {
                         key={pkg.id}
                         type="button"
                         onClick={() => setSelectedPackage(pkg.name)}
-                        className={`p-4 rounded-2xl text-left border transition-all duration-200 flex items-center justify-between ${
+                        className={`p-3.5 sm:p-4 rounded-2xl text-left border transition-all duration-200 flex items-center justify-between gap-2.5 ${
                           isSelected
                             ? 'bg-blue-600/30 border-cyan-400 shadow-[0_0_20px_rgba(56,189,248,0.2)] text-white font-bold'
                             : 'bg-slate-800/60 border-slate-700/80 text-slate-300 hover:border-slate-600'
                         }`}
                       >
-                        <div className="flex items-center gap-2.5">
+                        <div className="flex items-center gap-2.5 min-w-0">
                           <div
-                            className={`w-4 h-4 rounded-full border flex items-center justify-center ${
+                            className={`w-4 h-4 rounded-full border shrink-0 flex items-center justify-center ${
                               isSelected ? 'border-cyan-400 bg-cyan-500' : 'border-slate-500'
                             }`}
                           >
                             {isSelected && <div className="w-1.5 h-1.5 rounded-full bg-white" />}
                           </div>
-                          <span className="text-xs sm:text-sm">{pkg.name}</span>
+                          <div className="text-xs sm:text-sm leading-snug">
+                            {pkg.id === 'starter-50' ? (
+                              <span className="flex flex-wrap items-center gap-x-1.5">
+                                <span className="font-semibold text-white whitespace-nowrap">Starter 전환형 원페이지</span>
+                                <span className="text-cyan-300 font-bold whitespace-nowrap">(특가 50만 원)</span>
+                              </span>
+                            ) : pkg.id === 'business-250' ? (
+                              <span className="flex flex-wrap items-center gap-x-1.5">
+                                <span className="font-semibold text-slate-200 whitespace-nowrap">Business 기업형 멀티페이지</span>
+                                <span className="text-slate-400 font-normal whitespace-nowrap">(250만 원~)</span>
+                              </span>
+                            ) : (
+                              <span>{pkg.name}</span>
+                            )}
+                          </div>
                         </div>
                         {pkg.recommended && (
-                          <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                          <span className="shrink-0 text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 whitespace-nowrap">
                             특가 추천
                           </span>
                         )}
