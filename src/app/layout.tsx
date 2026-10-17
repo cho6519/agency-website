@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
+import { AGENCY_CONFIG } from '@/data/agencyConfig';
+import { JsonLd } from '@/components/JsonLd';
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -7,17 +9,54 @@ export const viewport: Viewport = {
   maximumScale: 1,
 };
 
+const { brand } = AGENCY_CONFIG;
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://url.kr/3a537l'),
-  title: 'TRANDOT WEB STUDIO | 월 유지비 평생 0원 50만 원 고전환 웹 제작',
+  metadataBase: new URL(brand.siteUrl),
+  title: `${brand.name} WEB STUDIO | 월 유지비 평생 0원 50만 원 고전환 웹 제작`,
   description: '매달 나가는 홈페이지 호스팅비, 평생 0원으로 끝내드립니다. 소상공인·중소기업 타깃 1페이지 5섹션 고전환 PC·모바일 반응형 웹사이트 3일 완성 솔루션',
-  keywords: '웹사이트 제작, 홈페이지 외주, 50만원 홈페이지, 원페이지 웹사이트, 반응형 웹, 클라우드 웹, 트랜닷 웹스튜디오, TRANDOT',
+  keywords: '웹사이트 제작, 홈페이지 외주, 50만원 홈페이지, 원페이지 웹사이트, 반응형 웹, 클라우드 웹, 트랜닷 웹스튜디오, TRANDOT, 소상공인 홈페이지, 중소기업 웹사이트, Cloudflare 호스팅',
+  alternates: {
+    canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
-    title: 'TRANDOT WEB STUDIO | 월 유지비 평생 0원 50만 원 고전환 웹 제작',
+    title: `${brand.name} WEB STUDIO | 월 유지비 평생 0원 50만 원 고전환 웹 제작`,
     description: '매달 나가는 홈페이지 호스팅비, 평생 0원으로 끝내드립니다. 소상공인·중소기업 타깃 1페이지 5섹션 고전환 반응형 웹사이트 3일 완성 솔루션',
-    url: 'https://url.kr/3a537l',
-    type: 'website',
+    url: brand.siteUrl,
+    siteName: `${brand.nameKr} (${brand.name})`,
     locale: 'ko_KR',
+    type: 'website',
+    images: [
+      {
+        url: brand.ogImage,
+        width: 1200,
+        height: 630,
+        alt: `${brand.nameKr} 웹스튜디오`,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${brand.name} WEB STUDIO | 월 유지비 평생 0원 50만 원 고전환 웹 제작`,
+    description: '매달 나가는 홈페이지 호스팅비, 평생 0원으로 끝내드립니다. 소상공인·중소기업 타깃 1페이지 5섹션 고전환 반응형 웹사이트 3일 완성 솔루션',
+    images: [brand.ogImage],
+  },
+  verification: {
+    google: brand.googleVerification || undefined,
+    other: {
+      ...(brand.naverVerification ? { 'naver-site-verification': brand.naverVerification } : {}),
+    },
   },
 };
 
@@ -28,6 +67,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko" className="scroll-smooth">
+      <head>
+        <JsonLd />
+      </head>
       <body className="antialiased bg-[#0A0E17] text-[#F8FAFC] selection:bg-blue-600 selection:text-white">
         {children}
       </body>

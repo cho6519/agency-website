@@ -7,13 +7,38 @@ export const AGENCY_CONFIG = {
     tagline: '소상공인·중소기업 타깃 고전환 웹 제작 에이전시',
     contactTel: '010-4951-6519',
     contactEmail: 'cho6519@gmail.com',
-    siteUrl: 'https://url.kr/3a537l', // TRANDOT 공식 단축 웹사이트 URL
+    siteUrl: 'https://agency-website.cho6519.workers.dev', // 공식 배포 도메인 (정적 sitemap 및 canonical 기준)
+    shortUrl: 'https://url.kr/3a537l', // TRANDOT 공식 단축 웹사이트 URL
     kakaoChannelUrl: 'https://pf.kakao.com/_EXdxnn', // TRANDOT 공식 카카오톡 채널 URL
     paymentUrl: 'https://bp2.kr/GizA', // 비대면 카드결제(블로그페이) 단축 URL
+    priceRange: '₩500,000 - ₩2,500,000',
+    ogImage: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&h=630&q=80',
+    naverVerification: '', // 네이버 서치어드바이저 소유확인 키 (입력 시 자동 메타태그 출력)
+    googleVerification: '', // 구글 서치콘솔 소유확인 키 (입력 시 자동 메타태그 출력)
     businessNumber: '855-72--00367',
     representative: '조강인',
     address: '서울 중랑구 동일로157길240호(묵동, 한아름빌딩)',
     web3FormsAccessKey: 'YOUR_WEB3FORMS_ACCESS_KEY', // https://web3forms.com 에서 무료 발급받은 Access Key를 입력하면 신청서가 cho6519@gmail.com으로 자동 발송됩니다.
+    services: [
+      {
+        name: 'Starter 전환형 5섹션 원페이지 웹사이트 제작',
+        description: '월 서버비 평생 0원, 단 3영업일 완성, 고객 문의 전환에 최적화된 모바일/PC 반응형 원페이지 솔루션',
+        price: '500,000',
+        priceCurrency: 'KRW',
+      },
+      {
+        name: 'Cloudflare 글로벌 무제한 무료 서버 호스팅 인프라 구축',
+        description: '글로벌 초고속 CDN 기반 무제한 트래픽 무료 호스팅을 적용하여 서버 유지비를 평생 0원으로 세팅',
+      },
+      {
+        name: '네이버 스마트플레이스 & 구글 검색엔진 최적화(SEO/GEO) 표준 탑재',
+        description: 'Google Lighthouse 98점대 초경량 Next.js 엔진 및 Schema.org 정밀 JSON-LD AI 검색 엔진 색인 표준 탑재',
+      },
+      {
+        name: 'Business 기업형 멀티페이지 프리미엄 구축',
+        description: '회사소개, 사업영역별 상세 서브페이지, Headless CMS 연동이 포함된 중소기업 및 전문직 법인 맞춤 웹',
+      },
+    ],
   },
 
   hero: {
