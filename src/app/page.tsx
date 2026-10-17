@@ -9,6 +9,7 @@ import { PricingSection } from '@/components/PricingSection';
 import { ProcessFaqSection } from '@/components/ProcessFaqSection';
 import { QuickApplicationForm } from '@/components/QuickApplicationForm';
 import { MobileFloatingBar } from '@/components/MobileFloatingBar';
+import { FloatingKakaoButton } from '@/components/FloatingKakaoButton';
 import { Footer } from '@/components/Footer';
 
 export default function Home() {
@@ -39,6 +40,9 @@ export default function Home() {
 
       {/* Footer */}
       <Footer />
+
+      {/* Desktop Floating KakaoTalk Consultation Button */}
+      <FloatingKakaoButton />
 
       {/* Mobile Bottom Floating Bar (390px optimized) */}
       <MobileFloatingBar />

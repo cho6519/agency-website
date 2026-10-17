@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Check, X, Sparkles, ArrowRight, ShieldCheck, Zap } from 'lucide-react';
+import { Check, X, Sparkles, ArrowRight, ShieldCheck, Zap, CreditCard } from 'lucide-react';
 import { AGENCY_CONFIG } from '@/data/agencyConfig';
 
 export const PricingSection: React.FC = () => {
@@ -107,6 +107,14 @@ export const PricingSection: React.FC = () => {
                     </div>
                   )}
                 </div>
+
+                {/* Notice for 50만 원 Starter Plan */}
+                {plan.id === 'starter' && (
+                  <div className="mt-4 p-3.5 rounded-2xl bg-gradient-to-r from-emerald-950/80 via-slate-900 to-cyan-950/60 border border-emerald-500/50 flex items-center gap-2.5 text-xs text-emerald-300 font-bold shadow-md">
+                    <CreditCard className="w-4 h-4 text-emerald-400 shrink-0" />
+                    <span className="leading-snug break-keep">✓ 전자세금계산서 발행 및 법인/신용카드 비대면 안전결제 지원</span>
+                  </div>
+                )}
 
                 {/* Bottom CTA */}
                 <div className="pt-4">

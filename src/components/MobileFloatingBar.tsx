@@ -28,7 +28,9 @@ export const MobileFloatingBar: React.FC = () => {
           id="mobile-btn-kakao"
           className="flex items-center justify-center gap-2 py-3 px-3 rounded-2xl bg-[#FEE500] hover:brightness-95 text-[#191919] font-black text-xs active:scale-95 transition-all shadow-lg shadow-amber-500/10 border border-amber-300/50"
         >
-          <MessageCircle className="w-4 h-4 fill-black shrink-0" />
+          <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 fill-[#191919] shrink-0">
+            <path d="M12 3C6.48 3 2 6.58 2 11c0 2.87 1.88 5.4 4.75 6.78-.17.6-.62 2.18-.71 2.52-.11.44.16.43.34.31.14-.09 2.24-1.52 3.14-2.14.79.11 1.62.17 2.48.17 5.52 0 10-3.58 10-8s-4.48-8-10-8z" />
+          </svg>
           <span>카카오톡 실시간 문의</span>
         </a>
       </div>

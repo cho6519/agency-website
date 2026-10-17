@@ -10,6 +10,7 @@ import {
   Terminal,
   ArrowRight,
   MessageCircle,
+  CreditCard,
 } from 'lucide-react';
 import { AGENCY_CONFIG } from '@/data/agencyConfig';
 import { LegalModal } from '@/components/LegalModal';
@@ -143,8 +144,8 @@ export const QuickApplicationForm: React.FC = () => {
                 </p>
               </div>
 
-              {/* Requirement 2: Prominent KakaoTalk Continue Consultation Button */}
-              <div className="max-w-md mx-auto pt-2">
+              {/* Requirement 2: Prominent KakaoTalk Continue Consultation Button & Card Payment Button */}
+              <div className="max-w-md mx-auto pt-2 space-y-3">
                 <a
                   href={AGENCY_CONFIG.brand.kakaoChannelUrl}
                   target="_blank"
@@ -152,12 +153,28 @@ export const QuickApplicationForm: React.FC = () => {
                   id="btn-kakao-continue"
                   className="w-full py-4 sm:py-5 px-6 rounded-2xl bg-[#FEE500] hover:bg-[#FADA0A] text-[#191919] font-black text-base sm:text-lg flex items-center justify-center gap-3 shadow-[0_0_35px_rgba(254,229,0,0.4)] hover:shadow-[0_0_45px_rgba(254,229,0,0.6)] active:scale-[0.99] transition-all border border-amber-300"
                 >
-                  <MessageCircle className="w-6 h-6 fill-black shrink-0" />
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 fill-[#191919] shrink-0">
+                    <path d="M12 3C6.48 3 2 6.58 2 11c0 2.87 1.88 5.4 4.75 6.78-.17.6-.62 2.18-.71 2.52-.11.44.16.43.34.31.14-.09 2.24-1.52 3.14-2.14.79.11 1.62.17 2.48.17 5.52 0 10-3.58 10-8s-4.48-8-10-8z" />
+                  </svg>
                   <span>카카오톡으로 빠른 상담 이어가기</span>
                   <ArrowRight className="w-5 h-5 text-black shrink-0" />
                 </a>
+
+                {/* Requirement: BlogPay Card Payment Button */}
+                <a
+                  href={AGENCY_CONFIG.brand.paymentUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  id="btn-card-payment"
+                  className="w-full py-4 sm:py-5 px-6 rounded-2xl bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 hover:brightness-110 text-white font-black text-base sm:text-lg flex items-center justify-center gap-2.5 shadow-[0_0_30px_rgba(59,130,246,0.35)] hover:shadow-[0_0_45px_rgba(56,189,248,0.5)] active:scale-[0.99] transition-all border border-cyan-400/50"
+                >
+                  <CreditCard className="w-6 h-6 text-cyan-200 shrink-0" />
+                  <span>💳 신용/법인카드 안전결제 바로가기</span>
+                  <ArrowRight className="w-5 h-5 text-white/90 shrink-0" />
+                </a>
+
                 <p className="text-[11px] text-slate-400 mt-2 font-mono">
-                  ※ 클릭 시 TRANDOT 공식 카카오톡 1:1 상담 채널로 즉시 이동합니다.
+                  ※ 클릭 시 TRANDOT 공식 카카오톡 채널 또는 비대면 카드결제(블로그페이) 창이 새 창으로 열립니다.
                 </p>
               </div>
 
@@ -371,6 +388,29 @@ export const QuickApplicationForm: React.FC = () => {
                 <p className="text-[11px] text-center text-slate-400 mt-2.5">
                   ※ 신청 즉시 결제되지 않으며, 담당 개발자가 기획서 검토 후 상세 견적을 유선 안내해 드립니다.
                 </p>
+
+                {/* Direct KakaoTalk Consultation Alternative */}
+                <div className="mt-5 pt-4 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-3 bg-slate-950/60 p-4 rounded-2xl border border-slate-800">
+                  <div className="flex items-center gap-2.5 text-left">
+                    <span className="text-xl">💬</span>
+                    <div>
+                      <p className="text-xs font-bold text-white">폼 작성이 번거로우신가요?</p>
+                      <p className="text-[11px] text-slate-400">카카오톡 1:1 채팅으로 기획안이나 궁금한 점을 바로 남겨주세요.</p>
+                    </div>
+                  </div>
+                  <a
+                    href={AGENCY_CONFIG.brand.kakaoChannelUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    id="form-direct-kakao"
+                    className="shrink-0 w-full sm:w-auto inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-[#FEE500] hover:bg-[#FADA0A] text-[#191919] font-black text-xs shadow-md transition-all active:scale-95"
+                  >
+                    <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 fill-[#191919] shrink-0">
+                      <path d="M12 3C6.48 3 2 6.58 2 11c0 2.87 1.88 5.4 4.75 6.78-.17.6-.62 2.18-.71 2.52-.11.44.16.43.34.31.14-.09 2.24-1.52 3.14-2.14.79.11 1.62.17 2.48.17 5.52 0 10-3.58 10-8s-4.48-8-10-8z" />
+                    </svg>
+                    <span>카톡으로 바로 문의</span>
+                  </a>
+                </div>
               </div>
 
             </form>

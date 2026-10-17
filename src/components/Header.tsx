@@ -52,6 +52,20 @@ export const Header: React.FC = () => {
         {/* Desktop Right CTA */}
         <div className="hidden md:flex items-center gap-3">
           <a
+            href={AGENCY_CONFIG.brand.kakaoChannelUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            id="header-btn-kakao"
+            className="inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl font-bold text-xs bg-[#FEE500] hover:bg-[#FADA0A] text-[#191919] shadow-md hover:shadow-amber-400/20 active:scale-95 transition-all border border-amber-300/50"
+            title="카카오톡 1:1 빠른 문의"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 fill-[#191919] shrink-0">
+              <path d="M12 3C6.48 3 2 6.58 2 11c0 2.87 1.88 5.4 4.75 6.78-.17.6-.62 2.18-.71 2.52-.11.44.16.43.34.31.14-.09 2.24-1.52 3.14-2.14.79.11 1.62.17 2.48.17 5.52 0 10-3.58 10-8s-4.48-8-10-8z" />
+            </svg>
+            <span>카톡 1:1 문의</span>
+          </a>
+
+          <a
             href="#apply"
             className="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 text-white shadow-lg shadow-blue-500/25 hover:shadow-cyan-500/35 hover:scale-[1.02] active:scale-[0.98] transition-all border border-cyan-400/30"
           >
@@ -88,9 +102,21 @@ export const Header: React.FC = () => {
               </a>
             ))}
             <a
+              href={AGENCY_CONFIG.brand.kakaoChannelUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileMenuOpen(false)}
+              className="mt-2 py-3 px-4 rounded-xl text-center text-sm font-black bg-[#FEE500] text-[#191919] shadow-md flex items-center justify-center gap-2"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 fill-[#191919] shrink-0">
+                <path d="M12 3C6.48 3 2 6.58 2 11c0 2.87 1.88 5.4 4.75 6.78-.17.6-.62 2.18-.71 2.52-.11.44.16.43.34.31.14-.09 2.24-1.52 3.14-2.14.79.11 1.62.17 2.48.17 5.52 0 10-3.58 10-8s-4.48-8-10-8z" />
+              </svg>
+              <span>카카오톡 1:1 빠른 문의하기</span>
+            </a>
+            <a
               href="#apply"
               onClick={() => setMobileMenuOpen(false)}
-              className="mt-2 py-3 px-4 rounded-xl text-center text-sm font-bold bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg shadow-blue-600/30"
+              className="py-3 px-4 rounded-xl text-center text-sm font-bold bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg shadow-blue-600/30"
             >
               50만 원 특가 슬롯 신청하기
             </a>
