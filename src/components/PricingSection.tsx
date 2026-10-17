@@ -47,12 +47,12 @@ export const PricingSection: React.FC = () => {
 
                 <div>
                   {/* Plan Name & Tag */}
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-xl sm:text-2xl font-black text-white">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                    <h3 className="text-xl sm:text-2xl font-black text-white break-keep">
                       {plan.name}
                     </h3>
                     {!isBest && plan.badge && (
-                      <span className="text-xs font-mono font-semibold px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 border border-slate-700">
+                      <span className="self-start sm:self-auto text-xs font-mono font-semibold px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 border border-slate-700 whitespace-nowrap">
                         {plan.badge}
                       </span>
                     )}
@@ -65,11 +65,11 @@ export const PricingSection: React.FC = () => {
                         정가 {plan.originalPrice}
                       </div>
                     )}
-                    <div className="flex items-baseline gap-2">
-                      <span className={`text-3xl sm:text-4xl font-black tracking-tight ${isBest ? 'text-cyan-400 drop-shadow-[0_0_12px_rgba(56,189,248,0.3)]' : 'text-white'}`}>
+                    <div className="flex flex-wrap items-baseline gap-x-2.5 gap-y-1">
+                      <span className={`text-3xl sm:text-4xl font-black tracking-tight whitespace-nowrap ${isBest ? 'text-cyan-400 drop-shadow-[0_0_12px_rgba(56,189,248,0.3)]' : 'text-white'}`}>
                         {plan.price}
                       </span>
-                      <span className="text-xs text-slate-400 font-mono">
+                      <span className="text-xs text-slate-400 font-mono break-keep">
                         ({plan.periodNotice})
                       </span>
                     </div>

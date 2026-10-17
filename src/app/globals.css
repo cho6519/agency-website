@@ -18,6 +18,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Korean typography & mobile readability: prevent awkward Korean syllable wrapping */
+body, h1, h2, h3, h4, h5, h6, p, span, a, button, li, dt, dd {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
 /* Custom modern scrollbar for tech theme */
 ::-webkit-scrollbar {
   width: 8px;

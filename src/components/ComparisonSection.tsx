@@ -16,11 +16,13 @@ export const ComparisonSection: React.FC = () => {
           <div className="inline-block text-xs font-mono font-bold tracking-widest uppercase mb-3 px-3.5 py-1.5 rounded-full bg-cyan-950/80 text-cyan-400 border border-cyan-500/30 shadow-[0_0_15px_rgba(56,189,248,0.15)]">
             // {comparison.badge}
           </div>
-          <h2 className="text-2xl sm:text-4xl font-black tracking-tight text-white leading-tight">
-            {comparison.title}
+          <h2 className="text-2xl sm:text-4xl font-black tracking-tight text-white leading-snug sm:leading-tight break-keep">
+            <span className="block sm:inline">왜 많은 대표님들이</span>{' '}
+            <span className="block sm:inline">기존 외주에서 갈아탈까요?</span>
           </h2>
-          <p className="mt-4 text-sm sm:text-base text-slate-300 leading-relaxed">
-            {comparison.subtitle}
+          <p className="mt-4 text-sm sm:text-base text-slate-300 leading-relaxed break-keep">
+            <span className="block sm:inline">홈페이지는 한번 만들고 끝이 아닙니다.</span>{' '}
+            <span className="block sm:inline">매달 청구되는 고정비와 모바일 전환율을 반드시 비교해 보세요.</span>
           </p>
         </div>
 

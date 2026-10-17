@@ -30,7 +30,7 @@ export const HeroSection: React.FC = () => {
         </div>
 
         {/* Main Headline */}
-        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.28] sm:leading-[1.18] whitespace-pre-line text-white">
+        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.28] sm:leading-[1.18] whitespace-pre-line text-white break-keep">
           {hero.mainCopy.split('평생 0원').map((part, index) =>
             index === 0 ? (
               <React.Fragment key={index}>
@@ -46,7 +46,7 @@ export const HeroSection: React.FC = () => {
         </h1>
 
         {/* Subtitle */}
-        <p className="mt-6 sm:mt-8 max-w-2xl mx-auto text-base sm:text-lg text-slate-300 font-normal leading-relaxed">
+        <p className="mt-6 sm:mt-8 max-w-2xl mx-auto text-base sm:text-lg text-slate-300 font-normal leading-relaxed break-keep">
           {hero.subCopy}
         </p>
 

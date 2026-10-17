@@ -79,10 +79,13 @@ export const InteractiveShowcase: React.FC = () => {
           <div className="inline-block text-xs font-mono font-bold tracking-widest uppercase mb-3 px-3.5 py-1.5 rounded-full bg-cyan-950/80 text-cyan-400 border border-cyan-500/30 shadow-[0_0_15px_rgba(56,189,248,0.15)]">
             // {showcase.badge}
           </div>
-          <h2 className="text-2xl sm:text-4xl font-black tracking-tight text-white leading-tight">
-            {showcase.title}
+          <h2 className="text-2xl sm:text-4xl font-black tracking-tight text-white leading-snug sm:leading-tight break-keep">
+            <span className="block sm:inline">실제 고객이 보게 될 고전환 웹사이트를</span>{' '}
+            <span className="block sm:inline text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-indigo-300">
+              직접 체험하세요.
+            </span>
           </h2>
-          <p className="mt-4 text-sm sm:text-base text-slate-300 leading-relaxed">
+          <p className="mt-4 text-sm sm:text-base text-slate-300 leading-relaxed break-keep">
             {showcase.subtitle}
           </p>
         </div>
@@ -198,14 +201,19 @@ export const InteractiveShowcase: React.FC = () => {
         </div>
 
         {/* Action Button Below Showcase */}
-        <div className="mt-10 text-center">
+        <div className="mt-8 sm:mt-10 px-4 text-center">
           <a
             href="#apply"
-            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-2xl font-bold text-sm bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 text-white shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-[1.02] transition-all border border-cyan-400/30"
+            className="w-full sm:w-auto inline-flex flex-col sm:flex-row items-center justify-center gap-1.5 sm:gap-2 px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl font-bold text-sm sm:text-base bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 text-white shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all border border-cyan-400/30 text-center leading-snug break-keep"
           >
-            <Sparkles className="w-4 h-4 text-amber-300" />
-            <span>선택한 [{currentSample.tabTitle}] 스타일로 50만 원 제작 신청하기</span>
-            <ArrowRight className="w-4 h-4" />
+            <div className="flex items-center gap-2">
+              <Sparkles className="w-4 h-4 text-amber-300 shrink-0" />
+              <span>선택한 [{currentSample.tabTitle}] 스타일로</span>
+            </div>
+            <div className="flex items-center gap-1.5 text-amber-300 font-extrabold sm:text-white sm:font-bold">
+              <span>50만 원 제작 신청하기</span>
+              <ArrowRight className="w-4 h-4 shrink-0" />
+            </div>
           </a>
         </div>
 

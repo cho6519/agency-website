@@ -39,10 +39,11 @@ export const ProcessFaqSection: React.FC = () => {
             <div className="inline-block text-xs font-mono font-bold tracking-widest uppercase mb-3 px-3.5 py-1.5 rounded-full bg-cyan-950/80 text-cyan-400 border border-cyan-500/30 shadow-[0_0_15px_rgba(56,189,248,0.15)]">
               // {process.badge}
             </div>
-            <h2 className="text-2xl sm:text-4xl font-black tracking-tight text-white leading-tight">
-              {process.title}
+            <h2 className="text-2xl sm:text-4xl font-black tracking-tight text-white leading-snug sm:leading-tight break-keep">
+              <span className="block sm:inline">신청부터 오픈까지,</span>{' '}
+              <span className="block sm:inline">단 3영업일이면 끝납니다</span>
             </h2>
-            <p className="mt-4 text-sm sm:text-base text-slate-300 leading-relaxed">
+            <p className="mt-4 text-sm sm:text-base text-slate-300 leading-relaxed break-keep">
               {process.subtitle}
             </p>
           </div>
